@@ -89,20 +89,20 @@ class MyBot(BaseBot):
           await self.highrise.teleport(user_dict["id"], user_dict["position"])
 
   async def on_user_join(self, user: User, position: Position | AnchorPosition) -> None:
-    if user.username == "1unp":
-     await self.highrise.chat(f" جتكم احلى انسانة في اللعبة ♡ميرا♡ {user.username}")
+    if user.username == "9y2":
+     await self.highrise.chat(f"وسع وسع وصل عمر 😌🔥 {user.username}")
       
-    if user.username == "Manuel_.666":
-      await self.highrise.chat(" جاكم عمي وعمكم مانويييل")
-
     if user.username == "Nicholas_.777":
-      await self.highrise.chat(" جاكم ميكانيكي هاي رايزززززز")
+      await self.highrise.chat(" وصل نيكولاس يعالممممم")
+
+    if user.username == "Xx":
+      await self.highrise.chat(" جاكم ")
 
     await self.highrise.send_emote("dance-breakdance")
-    await self.highrise.send_whisper(user.id, "وسبر ثنين")
-    await self.highrise.send_whisper(user.id, "ووسبر")
+    await self.highrise.send_whisper(user.id, "اكتب اوامر عشان توصلك اوامر البوت ع الشات")
+    await self.highrise.send_whisper(user.id, "لا تنسى تدعي للشهداء بغزة ")
     await self.highrise.chat(f" صلِ على رسول الله ♥  {user.username}")
-    await self.highrise.chat(f" انت حاليًا في اجدع روم في اللعبة 🔥  {user.username}")
+    await self.highrise.chat(f" اهلاً **نورت روم تعارف وصداقة **  {user.username}")
     
     await self.highrise.react("wink", user.id)
     await self.highrise.react("wink", user.id)
@@ -125,17 +125,17 @@ class MyBot(BaseBot):
 
 
   async def on_user_leave(self, user: User) -> None:
-    await self.highrise.chat(f" طلعت وارتحنا منك 😒 {user.username}")
+    await self.highrise.chat(f"الى اللقاء ❤️ {user.username}")
     
-    if user.username == "Nicholas_. 777":
-     await self.highrise.chat(" لييش عتم الرووم؟؟ اوحح نيكولاس طلع 😨 ")
+    if user.username == "9y2":
+     await self.highrise.chat(" لييش عتم الرووم؟؟ اوحح عمر طلع 💔 ")
      await self.highrise.send_emote("emote-sad")
       
-    if user.username == "Manuel_.666":
-      await  self.highrise.chat(f" {user.username} مانويل خرج !!! بليز رجعوه مش قادر اتنفس 💔 ")
+    if user.username == "Nicholas_.777":
+      await  self.highrise.chat(f" {user.username} نيكولاس خرج !!! بليز رجعوه مش قادر اتنفس 💔 ")
       await self.highrise.send_emote("emote-sad")
 
-    if user.username == "E30_Gpower":
+    if user.username == "9y2":
       await self.highrise.chat("😔")
       await self.highrise.send_emote("emote-sad")
 
@@ -168,8 +168,8 @@ class MyBot(BaseBot):
             await self.highrise.tip_user(user_id, f"gold_bar_{amount}")
     else:
         await self.highrise.chat("منفض ولله يبني")
-    if user.username == "Nicholas_. 777":
-     await self.highrise.chat(" لييش عتم الرووم؟؟ اوحح نيكولاس طلع 😨 ")
+    if user.username == "Xx":
+     await self.highrise.chat(" خروج ")
      await self.highrise.send_emote("emote-sad")
 
   
@@ -239,7 +239,7 @@ class MyBot(BaseBot):
     
     if message.startswith("اوامر"):
       await self.highrise.send_whisper(user.id, "اوامر البوت 👇👇👇")
-      await self.highrise.chat(f"المنيو-يا بوت-اسعار - اوامر!- رقصات من 1 الى 100 ك-رقصات بلعربي-رقصات بلأنجليزي -ترقص الناس-اكتب اعطيني +طلبك-رقصني-صعدني-نزلني-ويتم اضافة-الساعة")
+      await self.highrise.chat(f"صعدني ،نزلني،vip،الساعة ،اعطيني  قلب،يا بوت،رقصات من 1 الى 100")
 
     if message.startswith("يا بوت"):
       await self.highrise.chat(f"مش فاضي {user.username}")
@@ -255,7 +255,7 @@ class MyBot(BaseBot):
     if message.startswith("متاهة")and user.username in "Nicholas_.777":
        await self.highrise.teleport(user.id, Position(15, 18.5, 26))
       
-    if message.startswith("اسحب") and user.username in ["T9s", "Nicholas_.777"] :
+    if message.startswith("اسحب") and user.username in ["9y2", "Nicholas_.777","abo_majdi","5MA._","6j_5","apx0","nv.2","khaled._1","MAJDNOPO4","zv3","__saloma_637"] :
       user.username = message.split("@")[-1].strip()
       await self.teleport_user_next_to(user.username, user)
 
@@ -568,7 +568,7 @@ class MyBot(BaseBot):
               except ValueError:
                   await self.highrise.chat("الرجاء إدخال رقم صحيح.")
                   return
-              if user.username in [ "Nicholas_.777", "Manuel_.666" ]:
+              if user.username in [ "9y2", "Nicholas_.777","abo_majdi","5MA._","6j_5","apx0","nv.2","khaled._1","MAJDNOPO4","zv3","__saloma_637"]:
                   response = await self.highrise.get_room_users()
                   num_users = len(response.content)
                   total_gold = tip_amount * num_users
@@ -587,13 +587,13 @@ class MyBot(BaseBot):
                 await self.highrise.teleport(f"{user.id}", Position(12, 0, 19))
 
     if "صعدني" in message or "طلعني" in message:
-          await self.highrise.teleport(f"{user.id}", Position(1.1, 6.6, 5))
+          await self.highrise.teleport(f"{user.id}", Position(16, 6.6, 15))
       
     if "مرجحني" in message:
       await  self.highrise.send_emote("emote-float", user.id)
 
     if "vip" in message or "في اي بي" in message:
-      await self.highrise.teleport(f"{user.id}", Position(1.1, 6.6, 5))
+      await self.highrise.teleport(f"{user.id}", Position(16, 16, 15))
 
 
 
@@ -665,7 +665,7 @@ class MyBot(BaseBot):
             await self.highrise.chat(f"Removed '{username}' from the voice list.")
 
     if message.lstrip().startswith("add"):
-      if user.username.lower() in [ "Manuel_.666" , "Nicholas_.777"]:
+      if user.username.lower() in [ "9y2", "Nicholas_.777","abo_majdi","5MA._","6j_5","apx0","nv.2","khaled._1","MAJDNOPO4","zv3","__saloma_637"]:
               response = await self.highrise.get_room_users()
               users = [content[0] for content in response.content]
               usernames = [user.username.lower() for user in users]
@@ -1344,47 +1344,62 @@ class MyBot(BaseBot):
 
 
 
+    
+    allowed_users = ["xx", "Nicholas_.777", "9y2"]  # أضف أسماء المستخدمين المسموح لهم هنا
+
     if message.startswith("اطرد"):
-      if user.username == "T9s":
-          pass
-      else:
-          await self.highrise.chat("You do not have permission to use this command.")
-          return
-      #separete message into parts
-      parts = message.split()
-      #check if message is valid "kick @username"
-      if len(parts) != 2:
-          await self.highrise.chat("Invalid kick command format.")
-          return
-      #checks if there's a @ in the message
-      if "@" not in parts[1]:
-          username = parts[1]
-      else:
-          username = parts[1][1:]
-      #check if user is in room
-      room_users = (await self.highrise.get_room_users()).content
-      for room_user, pos in room_users:
-          if room_user.username.lower() == username.lower():
-              user_id = room_user.id
-              break
-      if "user_id" not in locals():
-          await self.highrise.chat("User not found, please specify a valid user and coordinate")
-          return
-      #kick user
-      try:
-          await self.highrise.moderate_room(user_id, "kick")
-      except Exception as e:
-          await self.highrise.chat(f"{e}")
-          return
-      #send message to chat
-      await self.highrise.chat(f"{username} has been kicked from the room.")
+        # تحقق مما إذا كان المستخدم الذي أصدر الأمر موجودًا في قائمة المستخدمين المسموح لهم
+        if user.username not in allowed_users:
+            await self.highrise.chat("You do not have permission to use this command.")
+            return
+
+        # تقسيم الرسالة إلى أجزاء
+        parts = message.split()
+
+        # تحقق من صحة صيغة الأمر "kick @username1 @username2 ..."
+        if len(parts) < 2:
+            await self.highrise.chat("Invalid kick command format.")
+            return
+
+        # استخراج أسماء المستخدمين
+        usernames = [part[1:] if part.startswith("@") else part for part in parts[1:]]
+
+        # التحقق مما إذا كان كل مستخدم موجودًا في الغرفة وطرده
+        room_users = (await self.highrise.get_room_users()).content
+        kicked_users = []
+        not_found_users = []
+
+        for username in usernames:
+            user_id = None
+            for room_user, pos in room_users:
+                if room_user.username.lower() == username.lower():
+                    user_id = room_user.id
+                    break
+
+            if user_id is None:
+                not_found_users.append(username)
+            else:
+                try:
+                    await self.highrise.moderate_room(user_id, "kick")
+                    kicked_users.append(username)
+                except Exception as e:
+                    await self.highrise.chat(f"Error while kicking {username}: {e}")
+
+        # إرسال رسالة إلى الدردشة
+        if kicked_users:
+            kicked_list = ", ".join(kicked_users)
+            await self.highrise.chat(f"The following users have been kicked from the room: {kicked_list}")
+
+        if not_found_users:
+            not_found_list = ", ".join(not_found_users)
+            await self.highrise.chat(f"The following users were not found: {not_found_list}")
 
 
 
 
 if __name__ == "__main__":
-  room_id = "66154c205cd5adacdcf8c0a6"
-  token = "6f5ce89bd5f09620ecf997a56b064e4eafc003946f48f7b7be5c0b65c5362f55" 
+  room_id = "664fc6133846c1529586b370"
+  token = "ea5c92898f4d21d40d4221b14ccd5e2f9563eedd4d560012416e3b2e2c43312c" 
   bot = Highrise() 
   bot_instance = MyBot(bot, room_id, token)
   asyncio.run(bot_instance.run())
